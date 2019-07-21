@@ -5,13 +5,26 @@
 
 body {
   overflow-x: hidden;
+  margin-bottom: 70px;
+}
+
+.header,
+.navbar,
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main,
+button,
+address {
+  font-family: "Merriweather", serif;
 }
 
 .header {
   background: rgb(0, 0, 0);
   padding: 10px;
   width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -22,7 +35,6 @@ body {
 
 .navbar {
   list-style: none;
-  display: flex;
   flex-direction: row;
   margin-top: 25px;
   font-family: "Open Sans", sans-serif;
@@ -39,6 +51,11 @@ li a:visited {
   text-decoration: none;
 }
 
+.services {
+  flex-direction: column;
+  align-items: center;
+}
+
 #picture {
   width: 100%;
 }
@@ -48,17 +65,31 @@ li a:visited {
 }
 
 #motto {
-  font-size: 20px;
+  font-size: 30px;
+  padding: 20px;
+  text-align: center;
 }
 
-h1 {
+#question {
   color: rgb(138, 98, 45);
   font-size: 30px;
+  padding: 20px;
+  text-align: center;
 }
 
-h3 {
+.service-name {
   color: rgb(138, 98, 45);
   font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  color: rgb(128, 128, 128);
+}
+
+.details {
+  text-align: center;
 }
 
 #reservation {
@@ -71,10 +102,13 @@ h3 {
   padding: 10px;
 }
 
+address {
+  text-align: center;
+}
+
 /*------------Desktop---------*/
 @media only screen and (min-width: 768px) {
   .header {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -89,6 +123,10 @@ h3 {
     padding: 0 10px 0 10px;
   }
 
+  .img-motto {
+    flex-direction: row;
+  }
+
   #picture {
     width: 50%;
   }
@@ -97,11 +135,19 @@ h3 {
     width: 700px;
   }
 
+  #motto-container {
+    position: relative;
+  }
+
   #motto {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50%;
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   h3 {
