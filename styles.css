@@ -6,6 +6,7 @@
 body {
   overflow-x: hidden;
   margin-bottom: 70px;
+  background: rgb(255, 255, 255);
 }
 
 .header,
@@ -19,6 +20,11 @@ main,
 button,
 address {
   font-family: "Merriweather", serif;
+}
+
+p,
+address {
+  color: rgb(128, 128, 128);
 }
 
 .header {
@@ -51,23 +57,18 @@ li a:visited {
   text-decoration: none;
 }
 
-.services {
-  flex-direction: column;
-  align-items: center;
-}
-
-#picture {
+#picture img {
   width: 100%;
-}
-
-#dog {
-  width: 500px;
 }
 
 #motto {
   font-size: 30px;
   padding: 20px;
   text-align: center;
+}
+
+.services {
+  flex-direction: column;
 }
 
 #question {
@@ -84,10 +85,6 @@ li a:visited {
   text-align: center;
 }
 
-p {
-  color: rgb(128, 128, 128);
-}
-
 .details {
   text-align: center;
 }
@@ -97,6 +94,7 @@ p {
   bottom: 0;
   width: 100%;
   font-size: 20px;
+  color: rgb(0, 0, 0);
   background: rgb(138, 98, 45);
   border: none;
   padding: 10px;
@@ -104,6 +102,12 @@ p {
 
 address {
   text-align: center;
+  padding-top: 30px;
+}
+
+address a {
+  text-decoration: none;
+  color: rgb(128, 128, 128);
 }
 
 /*------------Desktop---------*/
@@ -127,12 +131,8 @@ address {
     flex-direction: row;
   }
 
-  #picture {
+  #picture img {
     width: 50%;
-  }
-
-  #dog {
-    width: 700px;
   }
 
   #motto-container {
@@ -144,6 +144,8 @@ address {
     left: 50%;
     top: 50%;
     width: 50%;
+    font-size: 40px;
+    padding: 0;
   }
 
   h1 {
@@ -152,6 +154,19 @@ address {
 
   h3 {
     font-size: 30px;
+  }
+
+  .services-details {
+    display: flex;
+  }
+
+  #question {
+    padding: 70px 0 10px 0;
+  }
+
+  .details {
+    padding-top: 0;
+    padding: 45px;
   }
 
   #reservation {
